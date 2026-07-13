@@ -82,6 +82,10 @@ def login(email: str, password: str):
     access_token = create_access_token(payload)
 
     return {
-        "access_token": access_token,
-        "token_type": "bearer",
-    }
+    "token": access_token,
+    "user": {
+        "id": str(user["_id"]),
+        "full_name": user["full_name"],
+        "email": user["email"],
+    },
+}

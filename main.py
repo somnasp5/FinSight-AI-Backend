@@ -5,6 +5,7 @@ from routes.auth_routes import router as auth_router
 from routes.expense_routes import router as expense_router
 from routes.receipt_routes import router as receipt_router
 from routes.analytics_routes import router as analytics_router
+from routes.dashboard_routes import router as dashboard_router
 
 app = FastAPI(
     title="FinSight AI API",
@@ -24,6 +25,11 @@ app.include_router(
     auth_router,
     prefix="/api",
     tags=["Authentication"],
+)
+app.include_router(
+    dashboard_router,
+    prefix="/api",
+    tags=["Dashboard"],
 )
 
 app.include_router(

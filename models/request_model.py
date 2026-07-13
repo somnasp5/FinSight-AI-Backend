@@ -16,3 +16,13 @@ class ExpenseCreateRequest(BaseModel):
     total_amount: float
     purchase_date: datetime
     receipt_image: str
+
+class SignupRequest(BaseModel):
+    full_name: str
+    email: str
+    password: str
+
+
+class LoginRequest(BaseModel):
+    email: str
+    password: str    

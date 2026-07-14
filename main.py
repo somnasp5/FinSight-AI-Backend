@@ -21,7 +21,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        FRONTEND_URL,
+       "https://fin-sight-ai-frontend-liard.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
